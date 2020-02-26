@@ -30,7 +30,7 @@
     ],
     "addons": [
         {
-            "plan": "redistogo"
+            "plan": "heroku-redis"
         }
     ]
   }
