@@ -1,0 +1,36 @@
+{
+    "name": "hand-game",
+    "description": "Classic rock, paper or scissors hand game with different variations.",
+    "keywords": [
+      "django",
+      "heroku",
+      "daphne",
+      "channels",
+      "django-channels",
+      "websockets"
+    ],
+    "website": "https://github.com/DavidPDP/hand-game/tree/develop/",
+    "repository": "https://github.com/DavidPDP/hand-game/tree/develop/",
+    "env": {
+      "DJANGO_SECRET_KEY": {
+        "description": "A secret key for a particular Django installation.",
+        "generator": "secret"
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-redis"
+        }
+    ]
+  }
