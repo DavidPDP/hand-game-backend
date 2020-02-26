@@ -58,7 +58,7 @@ ASGI_APPLICATION = "rock_paper_scissors.routing.application"
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": os.environ['REDIS_URL'],  # Here we have Redis DSN (for ex. redis://localhost:6379/1)
+        "LOCATION": os.environ['REDISTOGO_URL'],  # Here we have Redis DSN (for ex. redis://localhost:6379/1)
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
             "MAX_ENTRIES": 1000  # Increase max cache entries to 1k (from 300)
@@ -70,7 +70,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [os.environ['REDIS_URL']],
+            "hosts": [os.environ['REDISTOGO_URL']],
         },
     },
 }
